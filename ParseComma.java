@@ -19,11 +19,11 @@ public class ParseComma{
 	
 	
 	for(;i<s.length();i++){
-	   //skiped comma
+	   //skips comma
 	   if(s.charAt(i)== ','){
 		   continue;
 		}
-           //skipped point and switches from before to after		
+           //skips point and switches from before to after		
 	   if(s.charAt(i)=='.'){
 		   point = true;
 		   continue;
@@ -33,7 +33,7 @@ public class ParseComma{
          	if(s.charAt(i)<48||s.charAt(i)>57){
 	   	   return 0;
 	        }
-	       
+	      // adds to eithor before or after 
 	   if(point){
 	   	   after = (after*10)+ (s.charAt(i)-48); 
 	   	   aftercount++;
@@ -53,7 +53,7 @@ public class ParseComma{
 	return sign*(before + after);
 	
     }
-    
+    // comments are the same as above
   public static int parseIntComma(String s){
   
 	
