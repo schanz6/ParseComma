@@ -25,7 +25,11 @@ public class ParseComma{
 		}
            //skips point and switches from before to after		
 	   if(s.charAt(i)=='.'){
+		   if(point == true){
+		   	return 0;
+		   }
 		   point = true;
+		   
 		   continue;
          	}
          	// if not a number returns 0
